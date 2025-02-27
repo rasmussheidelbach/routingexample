@@ -11,7 +11,7 @@ function FirstPage() {
     return (
         <section>
             <h1>First</h1>
-            <div className="accordion">
+            <div>
                 {itemlist.map((item, index) => (
                     <AccordionItem key={index} oneitem={item} />
                 ))}

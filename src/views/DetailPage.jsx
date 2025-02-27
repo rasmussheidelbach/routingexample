@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import mystyle from "./DetailPage.module.css";
 
 export default function DetailPage() {
     const details = [
@@ -19,8 +20,8 @@ export default function DetailPage() {
 
     return (
         <section>
-            <h1 className="details">Details for item {itemToShow.id}</h1>
-            <div className="detailstext">
+            <h1 className={mystyle.details}>Details for item {itemToShow.id}</h1>
+            <div className={mystyle.detailstext}>
                 {itemToShow.details}
             </div>
         </section>

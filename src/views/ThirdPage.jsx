@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import mystyle from './ThirdPAge.module.css';
 
 const itemlist = [
     { id: "1", name: "item 1", desc: "item 1 description. A fja laædsj æaljf puæaasr." },
@@ -21,18 +22,18 @@ function ThirdPage() {
     };
 
     return (
-        <div className="App">
+        <div>
             <h1>Third page</h1>
             <ul>
                 {itemlist.map((item) => (
-                    <li key={item.id} className="cursor nodisc">
+                    <li key={item.id} className={`${mystyle.cursor} ${mystyle.nodisc}`}>
                         <button onClick={() => handleClickOpen(item)}>{item.name}</button>
                     </li>
                 ))}
             </ul>
 
             {open && (
-                <div className="dialog">
+                <div className={mystyle.dialog}>
                     <h2>{selectedItem.name}</h2>
                     <p>{selectedItem.desc}</p>
                     <button onClick={handleClose}>Close</button>

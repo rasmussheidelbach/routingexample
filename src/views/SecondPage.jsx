@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import mystyle from "./SecondPage.module.css";
 
 function SecondPage() {
     const itemlist = [
@@ -30,7 +31,7 @@ function SecondPage() {
             <h1>Eventhandlers and useState</h1>
             <ul>
                 {itemlist.map((item) => (
-                    <li className="cursor" key={item.id} onClick={() => handleClick(item)}>
+                    <li className={mystyle.cursor} key={item.id} onClick={() => handleClick(item)}>
                         {item.name}
                     </li>
                 ))}

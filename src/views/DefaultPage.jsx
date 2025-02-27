@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import mystyle from "./DefaultPage.module.css";
 
 export default function DefaultPage() {
 
@@ -11,9 +12,9 @@ export default function DefaultPage() {
     return (
         <section>
             <h1>Default page</h1>
-            <div className="flexcards">
+            <div className={mystyle.flexcards}>
                 {itemlist.map((item, index) => (
-                    <div key={index} className="card">
+                    <div key={index} className={mystyle.card}>
                         <h1>{item.name}</h1>
                         <p>{item.desc}</p>
                         <p><Link to={`/detail/${item.id}`}>Read more</Link></p>
