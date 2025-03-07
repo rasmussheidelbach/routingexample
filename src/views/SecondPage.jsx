@@ -8,6 +8,7 @@ function SecondPage() {
         { id: "3", name: "item 3", desc: "item 3 description. A kpidf kfd jfkji uows lsr." },
     ];
 
+    // Variablen bcolor har standard værdien "white"
     const [bcolor, setBcolor] = useState("white");
     const [tcolor, setTcolor] = useState("black");
     const [message, setMessage] = useState("Click on an item to see its details");
